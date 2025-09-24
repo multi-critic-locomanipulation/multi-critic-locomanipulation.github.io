@@ -1,0 +1,261 @@
+/* Enhanced CSS for Multi-critic Locomanipulation Project Website */
+
+/* General styling */
+body {
+  font-family: 'Google Sans', 'Noto Sans', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  scroll-behavior: smooth;
+  background-color: #f9f9f9;
+  padding-top: 3.25rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+/* Navbar styling */
+.navbar {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+}
+
+.navbar-item {
+  font-weight: 500;
+  color: #4a4a4a;
+  transition: color 0.3s ease;
+}
+
+.navbar-item:hover {
+  color: #3273dc;
+  background-color: transparent !important;
+}
+
+.button.is-primary {
+  background-color: #3273dc;
+  transition: all 0.3s ease;
+}
+
+/* Gradient background for hero section */
+.hero {
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4e7eb 100%);
+}
+
+/* Main title styling */
+.publication-title {
+  font-family: 'Google Sans', sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem !important;
+  margin-bottom: 1.2rem;
+  background: linear-gradient(to right, #4286f4, #3776e3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Authors styling */
+.publication-authors {
+  margin-bottom: 1.5rem;
+}
+
+.author-block {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.publication-authors a {
+  color: #3273dc !important;
+  transition: color 0.3s ease;
+}
+
+.publication-authors a:hover {
+  color: #1a56c4 !important;
+  text-decoration: underline;
+}
+
+/* Buttons styling */
+.button.is-dark {
+  background-color: #3273dc;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.button.is-dark:hover {
+  background-color: #1a56c4;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.external-link {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Section styling */
+.section {
+  padding: 3rem 1.5rem;
+}
+
+.section .title {
+  margin-bottom: 1.5rem;
+  color: #3273dc;
+}
+
+/* Card-like content boxes */
+.content-box {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Abstract section styling */
+.abstract-section {
+  background-color: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+  margin-top: -4rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* Video containers */
+.video-container {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.video-container:hover {
+  transform: scale(1.02);
+}
+
+video {
+  border-radius: 8px;
+  width: 100%;
+}
+
+/* Teaser video */
+.teaser .hero-body {
+  padding-top: 0;
+  padding-bottom: 3rem;
+}
+
+#teaser {
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer styling */
+.footer {
+  background-color: #f5f7fa;
+  padding: 3rem 1.5rem 2rem;
+}
+
+.footer .icon-link {
+  font-size: 25px;
+  color: #3273dc;
+  transition: color 0.3s ease;
+}
+
+.footer .icon-link:hover {
+  color: #1a56c4;
+}
+
+/* BibTeX section */
+#BibTeX {
+  background-color: #f5f7fa;
+}
+
+#BibTeX pre {
+  border-radius: 8px;
+  background-color: #f0f2f5;
+  border: 1px solid #e4e7eb;
+  padding: 1rem;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .publication-title {
+    font-size: 2rem !important;
+  }
+  
+  .content-box {
+    padding: 1.5rem;
+  }
+  
+  .abstract-section {
+    margin-top: -2rem;
+  }
+}
+
+/* Experiment results section */
+.results-section h3.title.is-5 {
+  background-color: #3273dc;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+.results-section h4.title.is-6 {
+  color: #3273dc;
+  border-bottom: 2px solid #3273dc;
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+/* Model architecture image */
+.model-architecture-img {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.model-architecture-img:hover {
+  transform: scale(1.02);
+}
+
+/* Scroll to top button */
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: #3273dc;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 999;
+}
+
+.scroll-to-top.show {
+  opacity: 0.8;
+}
+
+.scroll-to-top:hover {
+  opacity: 1;
+}

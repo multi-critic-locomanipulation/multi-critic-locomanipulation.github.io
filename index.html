@@ -17,23 +17,66 @@
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="./static/css/enhanced-style.css">
   <link rel="icon" href="./static/images/favicon.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+  <script src="./static/js/enhanced-script.js"></script>
 </head>
 
 <body>
+  <!-- Navigation -->
+  <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-end">
+          <a class="navbar-item" href="#abstract">
+            Abstract
+          </a>
+          <a class="navbar-item" href="#architecture">
+            Architecture
+          </a>
+          <a class="navbar-item" href="#results">
+            Results
+          </a>
+          <a class="navbar-item" href="#BibTeX">
+            BibTeX
+          </a>
+          <div class="navbar-item">
+            <div class="buttons">
+              <a href="https://arxiv.org/pdf/2507.08656" class="button is-primary">
+                <span class="icon">
+                  <i class="fas fa-file-pdf"></i>
+                </span>
+                <span>Paper</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
 
   <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Multi-critic Learning for Whole-body End-effector Twist Tracking
+            <h1 class="title is-1 publication-title animate__animated animate__fadeIn">Multi-critic Learning for Whole-body End-effector Twist Tracking
             </h1>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
@@ -90,19 +133,21 @@
   <section class="hero teaser">
     <div class="container is-max-desktop">
       <div class="hero-body">
-        <video id="teaser" controls loop playsinline height="100%">
-          <source src="./static/videos/688.mp4" type="video/mp4">
-        </video>
+        <div class="video-container animate__animated animate__fadeIn">
+          <video id="teaser" controls autoplay muted loop playsinline height="100%">
+            <source src="./static/videos/688.mp4" type="video/mp4">
+          </video>
+        </div>
         <h2 class="subtitle has-text-centered">
-          Spotlight video.
+          Spotlight video showcasing our multi-critic approach for whole-body end-effector control
         </h2>
       </div>
     </div>
   </section>
-  <section class="section">
+  <section id="abstract" class="section">
     <div class="container is-max-desktop">
       <!-- Abstract. -->
-      <div class="columns is-centered has-text-centered">
+      <div class="columns is-centered has-text-centered animate__animated animate__fadeIn">
         <div class="column is-four-fifths">
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
@@ -130,10 +175,10 @@
 
     </div>
   </section>
-  <section class="section">
+  <section id="architecture" class="section">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
-        <div class="column ">
+        <div class="column content-box">
           <h2 class="title is-3">Model Architecture</h2>
 
           <div class="content has-text-centered">
@@ -151,8 +196,8 @@
         </div>
       </div>
     </div>
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
+    <div id="results" class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths content-box">
         <h2 class="title is-3">Experimental Results</h2>
         <div class="content has-text-justified">
           <p>
@@ -308,7 +353,7 @@
       <pre><code>@article{vijayan2025multi,
   author    = {Vijayan, Aravind Elanjimattathil and Cramariuc, Andrei and Risiglione, Mattia and Gehring, Christian and Hutter, Marco},
   title     = {Multi-critic Learning for Whole-body End-effector Twist Tracking},
-  journal   = {CoRL},
+  journal   = {Conference on Robot Learning (CoRL)},
   year      = {2025},
 }</code></pre>
     </div>
@@ -318,20 +363,32 @@
   <footer class="footer">
     <div class="container">
       <div class="content has-text-centered">
-        <a class="icon-link" href="./static/videos/nerfies_paper.pdf">
-          <i class="fas fa-file-pdf"></i>
-        </a>
-        <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
-          <i class="fab fa-github"></i>
-        </a>
+        <div class="mb-5">
+          <a class="icon-link mx-2" href="https://arxiv.org/pdf/2507.08656" title="Download PDF">
+            <i class="fas fa-file-pdf"></i>
+          </a>
+          <a class="icon-link mx-2" href="https://arxiv.org/abs/2507.08656" title="arXiv">
+            <i class="ai ai-arxiv"></i>
+          </a>
+          <a class="icon-link mx-2" href="https://github.com/multi-critic-locomanipulation" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
       </div>
       <div class="columns is-centered">
         <div class="column is-8">
           <div class="content">
-            <p>
+            <p class="has-text-centered">
+              <a href="#" class="mx-2">Home</a> |
+              <a href="#abstract" class="mx-2">Abstract</a> |
+              <a href="#architecture" class="mx-2">Architecture</a> |
+              <a href="#results" class="mx-2">Results</a> |
+              <a href="#BibTeX" class="mx-2">BibTeX</a>
+            </p>
+            <p class="has-text-centered">
               This website is licensed under a <a rel="license"
                 href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-                Commons Attribution-ShareAlike 4.0 International License</a>. Website template borrowed from <a
+                Commons Attribution-ShareAlike 4.0 International License</a>.<br>Website template borrowed from <a
                 href="https://github.com/nerfies/nerfies.github.io"><span class="dnerf">Nerfies</span></a>.
             </p>
           </div>
@@ -339,6 +396,11 @@
       </div>
     </div>
   </footer>
+  
+  <!-- Scroll to top button -->
+  <div class="scroll-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </div>
 
 </body>
 
